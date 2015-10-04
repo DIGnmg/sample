@@ -11,7 +11,7 @@ class FlaskrTestCase(unittest.TestCase):
 
     def test_index(self):
         index = self.mainApp.get('/')
-        assert 'mainApp2' in index.data
+        assert 'mainApp' in index.data
 
 if __name__ == '__main__':
     unittest.main()
