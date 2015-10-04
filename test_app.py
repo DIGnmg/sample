@@ -1,16 +1,16 @@
 import os
 import unittest
 import tempfile
-import app
+import mainApp
 
 class FlaskrTestCase(unittest.TestCase):
 
     def setUp(self):
-        app.app.config['TESTING'] = True
-        self.app = app.app.test_client()
+        mainApp.app.config['TESTING'] = True
+        self.mainApp = mainApp.app.test_client()
 
     def test_index(self):
-        index = self.app.get('/')
+        index = self.mainApp.get('/')
         assert 'Hello World' in index.data
 
 if __name__ == '__main__':
